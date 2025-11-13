@@ -75,7 +75,7 @@ services:
 
   mi-servicio:
     build:
-      context: ./mi-servicio
+      context: .
 
 volumes:
   code_config:
