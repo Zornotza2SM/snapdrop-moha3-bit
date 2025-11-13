@@ -39,7 +39,7 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: Europe/Madrid
-      PASSWORD: Safi2012
+      PASSWORD: $¨{VSCODE_PASSWORD}
     volumes:
       - ./:/config/workspace
       - code_config:/config
@@ -72,6 +72,10 @@ services:
     ports:
       - 8200:8200
     restart: unless-stopped
+
+  mi-servicio:
+    build:
+      context: ./mi-servicio
 
 volumes:
   code_config:
